@@ -1,0 +1,39 @@
+body {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+    padding-top: 8px;
+    overflow: auto;
+}
+
+img {
+    height: 40px;
+    width: 200px;
+}
+
+form {
+    padding-top: 10px;
+}
+
+svg {
+    display: inline;
+    position: relative;
+}
+
+div.input-group-prepend {
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.row {
+    padding: 2px;
+}
+
+@media only screen and (max-width: 767px) {
+  div.col-md-3 {
+    text-align: left !important;
+  }
+}

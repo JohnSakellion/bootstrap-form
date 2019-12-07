@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Twitter Bootstrap Example</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href='lib/font-awesome/css/all.min.css'>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="logo">
+                <div class="row">
+                    <div class="col-md-3 offset-md-3">
+                        <img src="deloitte.png" />
+                    </div>
+                </div>
+            </div>
+            <form action="" method="POST" onsubmit = "return(validateForm());" name="bootstrapForm">
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="fullName">Full Name</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-user"></span>
+                            </div>
+                            <input type="text" id="fullName" class="form-control" placeholder="Full Name" name="fullname" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="address1">Address Line 1</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-home"></span>
+                            </div>
+                            <input type="text" id="address1" class="form-control" placeholder="Address Line 1" name="address1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="address2">Address Line 2</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-home"></span>
+                            </div>
+                            <input type="text" id="address2" class="form-control" placeholder="Address Line 2" name="address2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-city"></span>
+                            </div>
+                            <input type="text" id="city" class="form-control" placeholder="City" name="city"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="region">State/Province/Region</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-sign"></span>
+                            </div>
+                            <input type="text" id="region" class="form-control" placeholder="State/Province/Region" name="region"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="postzip">Postal Code-ZIP</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-mail-bulk"></span>
+                            </div>
+                            <input type="text" id="postzip" class="form-control" placeholder="Postal Code/ZIP" name="postzip"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-flag"></span>
+                            </div>
+                            <select name = "country" id="country" class="form-control">
+                                <option value="-1" selected>[choose a country]</option>
+                                <option value="1">USA</option>
+                                <option value="2">UK</option>
+                                <option value="3">GREECE</option>
+                                <option value="4">DELOITTE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-envelope"></span>
+                            </div>
+                            <input type="email" id="email" class="form-control" placeholder="Email" name="email" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <input type="text" id="phone" class="form-control" placeholder="(4244) (123) (678)" name="phone" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <div class="col-md-3 offset-md-3">
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="lib/font-awesome/js/all.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
